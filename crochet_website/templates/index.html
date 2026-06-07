@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Indrayani Art Corner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+
+<img src="{{ url_for('static', filename='images/logo.png') }}" class="logo">
+
+<h1>Indrayani Art Corner</h1>
+
+<h3>Handmade With Love ❤️</h3>
+
+<p>Modern Crochet With A Vintage Soul</p>
+<p>Welcome to Indrayani Art Corner.We create handmade crochet flowers,bouquets, keychains,</p> 
+<p>toys and customized gifts.Every product is carefully handcrafted with love.</p>
+
+<a href="https://www.instagram.com/crochet_artcorner_01/" target="_blank" class="insta">
+Instagram Page
+</a>
+
+</header>
+
+<section class="about">
+
+</section>
+<h2 class="title">Our Products</h2>
+
+<div class="products">
+
+{% for product in products %}
+
+<div class="card">
+
+<img src="{{ url_for('static', filename='images/' + product.image) }}">
+
+<h3>{{ product.name }}</h3>
+
+<p>{{ product.price }}</p>
+
+<a href="https://wa.me/919518506054" target="_blank">
+<button>Order on WhatsApp</button>
+</a>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+<section class="reviews">
+<h2>Customer Reviews</h2>
+
+<div class="review">
+⭐⭐⭐⭐⭐
+<p>Beautiful crochet work.</p>
+</div><div class="review">
+⭐⭐⭐⭐⭐
+<p>Excellent quality and fast delivery.</p>
+</div><div class="review">
+⭐⭐⭐⭐⭐
+<p>Perfect handmade gift.</p>
+</div>
+</section>
+
+<section class="owner">
+<h2>Contact Us</h2>
+<p><b>Owner:</b> Indrayani Panchal</p>
+<p><b>Email:</b> indrayanipanchal@gmail.com</p>
+<p><b>Mobile:</b> +91 9518506054</p>
+</section>
+<footer>
+<p>Indrayani Art Corner © 2026</p>
+<p>Handmade With Love ❤️</p>
+</footer>
+</body>
+</html>
